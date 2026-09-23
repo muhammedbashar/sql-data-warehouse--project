@@ -214,16 +214,72 @@ Includes:
 sql-server-data-warehouse-and-sales-analytics/
 │
 ├── datasets/
+│   ├── source_crm/
+│   │   ├── cust_info(1).csv
+│   │   ├── prd_info.csv
+│   │   └── sales_details.csv
+│   │
+│   └── source_erp/
+│       ├── CUST_AZ12.csv
+│       ├── LOC_A101.csv
+│       └── PX_CAT_G1V2.csv
+│
 ├── docs/
+│   ├── architecture/
+│   │   ├── data_architecture.png
+│   │   ├── data_layers.pdf
+│   │   ├── data_flow.png
+│   │   ├── data_model.png
+│   │   └── ETL.png
+│   │
+│   ├── data_quality/
+│   │   ├── data_integrity.png
+│   │   └── data_catalog.md
+│   │
+│   ├── project_management/
+│   │   └── project_roadmap.png
+│   │
+│   └── naming_convention.md
+│
 ├── scripts/
 │   ├── 00_initialization/
+│   │   └── init_database.sql
+│   │
 │   ├── 01_bronze/
+│   │   ├── ddl_bronze.sql
+│   │   └── proc_load_bronze.sql
+│   │
 │   ├── 02_silver/
+│   │   ├── ddl_silver.sql
+│   │   └── proc_load_silver.sql
+│   │
 │   ├── 03_gold/
-│   └── 04_analysis/
-├── reports/
+│   │   └── ddl_gold.sql
+│   │
+│   ├── 04_analysis/
+│   │   ├── 01_database_exploration.sql
+│   │   ├── 02_dimensions_exploration.sql
+│   │   ├── 03_data_range_exploration.sql
+│   │   ├── 04_measure_exploration.sql
+│   │   ├── 05_magnitude_analysis.sql
+│   │   ├── 06_ranking_analysis.sql
+│   │   ├── 07_change_over_time_analysis.sql
+│   │   ├── 08_cumulative_analysis.sql
+│   │   ├── 09_performance_analysis.sql
+│   │   ├── 10_data_segmentation.sql
+│   │   └── 11_part_to_whole_analysis.sql
+│   │
+│   └── 05_reports/
+│       ├── 12_report_customers.sql
+│       └── 13_report_products.sql
+│
 ├── tests/
+│   ├── quality_checks_silver.sql
+│   └── quality_checks_gold.sql
+│
 ├── analysis/
+│   └── key_findings.md
+│
 ├── README.md
 ├── LICENSE
 └── .gitignore
